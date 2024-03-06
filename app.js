@@ -13,18 +13,13 @@ const server = require("http").Server(app);
 const ListPostDB = require("./data/PostDB");
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
     allowedHeaders: ["my-custom-header"],
     credentials: true,
   },
 });
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+app.use(cors());
 const store = new MongoDB({
   uri: "mongodb+srv://caoboi520:Aw8umOX1tKDxMVsg@cluster0.fdehoqk.mongodb.net/lab21?retryWrites=true&w=majority&appName=Cluster0",
   collection: "sessions",
