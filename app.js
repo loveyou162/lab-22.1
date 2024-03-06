@@ -26,7 +26,7 @@ app.use(
   })
 );
 const store = new MongoDB({
-  uri: "mongodb+srv://caoboi520:Aw8umOX1tKDxMVsg@cluster0.fdehoqk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  uri: "mongodb+srv://caoboi520:Aw8umOX1tKDxMVsg@cluster0.fdehoqk.mongodb.net/lab21?retryWrites=true&w=majority&appName=Cluster0",
   collection: "sessions",
 });
 app.use(
