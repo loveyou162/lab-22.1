@@ -13,7 +13,7 @@ const server = require("http").Server(app);
 const ListPostDB = require("./data/PostDB");
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["http://localhost:3000"],
+    origin: "http://localhost:3000",
     allowedHeaders: ["my-custom-header"],
     credentials: true,
   },
@@ -21,7 +21,7 @@ const io = require("socket.io")(server, {
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
